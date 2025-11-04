@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TAHI — Te amo 3000 millones</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;600&family=Great+Vibes&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app">
+
+    <!-- 1. Carta inicial -->
+    <section id="carta" class="panel visible">
+      <div class="card">
+        <h2>Mi amor </h2>
+        <p>
+         Mi amor,
+
+Hace tres años comenzó una historia que no quiero que termine nunca. Hemos pasado por momentos hermosos y también por etapas difíciles, 
+pero algo que siempre ha permanecido intacto es el amor que nos une. A veces la vida nos pone a prueba, y aun así, aquí seguimos,
+ eligiéndonos una y otra vez, porque lo nuestro vale cada intento, cada esfuerzo y cada día compartido.
+ </p>
+<p>
+Hoy quiero darte las gracias por ser tú: por tu risa que ilumina mis días, por tu sonrisa tan perfecta, por tus locuras que le ponen sabor a todo, por tu forma tan única de ver el mundo 
+(aunque de vez en cuando deberías aprender de mí a no pensar tanto en lo que aún no pasa y a fluir).
+Esta súper plataforma que tu súper novia creó es solo un pequeño recordatorio de cuánto te amo, cuánto te admiro y cuánto deseo seguir construyendo mi vida a tu lado
+ (además de recordarte lo brillante que es tu novia, obviamente ).
+</p>
+<p>
+Me encanta pasar tiempo contigo, incluso cuando no decimos nada, cuando solo estamos ahí, en silencio, pero conectadas. Adoro tus pequeños dramas, tus ocurrencias,
+y esa manera tan tuya de llenar cualquier lugar con tu energía. Eres una persona maravillosa, hermosa y tan importante para mí que a veces no encuentro palabras
+ suficientes para expresarlo.
+</p>
+<p>
+Espero estar a la altura de lo que mereces, hacer las cosas bien y seguir mejorando cada dia por ti, y convertirme en alguien tan especial e irremplazable en tu vida como tú lo eres en la mía.
+Gracias por estos tres años, por cada sonrisa, por cada abrazo, por cada “te amo”.
+Y sobre todo, gracias por seguir eligiéndome.
+</p>
+<p>
+Te amo, mi princesa.
+        </p>
+        <button class="btn primary" onclick="mostrar('frases')">Siguiente</button>
+      </div>
+    </section>
+
+    <!-- 2. Frases flotantes -->
+    <section id="frases" class="panel hidden">
+      <div class="card">
+        <h3>Frases que me nacen cuando pienso en ti</h3>
+        <div id="frasesFlotantes" class="frases-flotantes"></div>
+        <button class="btn primary" onclick="mostrar('dinamica1')">Siguienteeee</button>
+      </div>
+    </section>
+
+    <!-- 3. Dinámica 1: Medidor -->
+    <section id="dinamica1" class="panel hidden">
+      <div class="card">
+        <h3>¿Qué tanto me amash?</h3>
+        <input type="range" min="0" max="100" value="50" id="sliderAmor" />
+        <p id="valorAmor">50%</p>
+        <button class="btn primary" onclick="mostrar('dinamica2')">Siguiente</button>
+      </div>
+    </section>
+
+    <!-- 4. Dinámica 2: Opciones -->
+    <section id="dinamica2" class="panel hidden">
+      <div class="card">
+        <h3>¿Que crees que es lo que mas me gusta de ti?</h3>
+        <div class="opciones">
+          <button onclick="seleccionarOpcion(this)">Mis abrazos </button>
+          <button onclick="seleccionarOpcion(this)">Mis risas </button>
+          <button onclick="seleccionarOpcion(this)">Mis miradas </button>
+          <button onclick="seleccionarOpcion(this)">Mis besos </button>
+        </div>
+        <button class="btn primary" onclick="mostrar('dinamica3')">Último Siguientee</button>
+      </div>
+    </section>
+
+    <!-- 5. Dinámica 3: Palabra libre + resumen -->
+    <section id="dinamica3" class="panel hidden">
+      <div class="card">
+        <h3>Escribe algo que describa lo que sientes por mí</h3>
+        <input type="text" id="palabraAmor" placeholder="Ej: infinito..." />
+        <button class="btn primary" onclick="mostrarResumen()">Ver resumen </button>
+      </div>
+    </section>
+
+    <!-- 6. Resumen para captura -->
+    <section id="resumen" class="panel hidden">
+      <div class="card resumen">
+        <h3>Esto eres tú, para mí </h3>
+        <p id="resumenAmor"></p>
+        <p id="resumenOpcion"></p>
+        <p id="resumenPalabra"></p>
+        <p class="instruccion">Haz captura de esto, y enviamelo que quiero guardarlo para siempre </p>
+        <button class="btn primary" onclick="mostrarExplosion()">shaa?</button>
+
+      </div>
+    </section>
+
+    <!-- 7. Explosión final -->
+    <section id="explosion" class="panel hidden">
+      <div class="explosion-text" id="explosionText">Juanita te amaaa 3000 milloneeeess </div>
+      <div class="tahi" id="tahi">TAHI</div>
+    </section>
+
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
